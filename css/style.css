@@ -1,0 +1,429 @@
+@font-face {
+    font-family:'Gilroy Light';
+    src:
+    url('../fonts/Gilroy-Light.otf') format(opentype);
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family:'Gilroy Bold';
+    src:
+    url('../fonts/Gilroy-ExtraBold.otf') format(opentype);
+    font-weight:bold;
+    font-style:normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background: url('../img/bg.svg') no-repeat #fff;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.cart__counter{
+    display: inline-block; 
+    background-color: #F9B300; 
+    border-radius: 50px; 
+    min-width: 20px; 
+    height: 20px; 
+    text-align: center;
+}
+.header{
+    position:fixed;
+    top: 0;
+    z-index: 9;
+    font-family: 'Gilroy Light', sans-serif;
+    background-color: #fff;
+    height: 160px;
+    width: 100%;
+    box-shadow: 0px 5px 20px 0px rgba(157, 157, 157, 0.25);
+    display: flex;
+    align-items: center;
+}
+.logo__img{
+    width: 260px;
+    height: 116px;
+}
+.header__inner{
+    padding: 0 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search{
+    width: 1240px;
+    height: 57px;
+    font-family: 'Gilroy Light', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 0px rgba(157, 157, 157, 0.5);
+    outline: none;
+    background: url('../img/search.svg') no-repeat 32px 31px #fff;
+    background-position: 30px 11px;
+    padding-left: 80px;
+}
+.cart__img{
+    width: 33px;
+    height: 31px;
+}
+.nav{
+    display: flex;
+}
+.nav__link + .nav__link{
+    margin-left: 53px;
+}
+.container{
+    width: 100%;
+    padding: 0 100px;
+    margin: 0 auto;
+}
+.face{
+    padding-top: 150px;
+}
+.face__text{
+    padding-top: 120px;
+    font-size: 70px;
+    font-family: 'Gilroy Bold', sans-serif;
+    font-weight: 800;
+}
+.face__text-p{
+    width: 658px;
+    font-size: 25px;
+    font-family: 'Gilroy Light', sans-serif;
+}
+.catalog__btn{
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    width: 400px;
+    height: 80px;
+    background-color: #F9B300;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Gilroy Light', sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+}
+.catalog__btn:hover{
+    background-color: #e4a300;
+}
+.catalog__btn:active{
+    background-color: #bd8700;
+}
+.catalog{
+    padding-top: 276px;
+}
+.catalog__text{
+    font-size: 50px;
+    font-family: 'Gilroy Bold', sans-serif;
+}
+.catalog__inner{
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.catalog__item{
+    position: relative;
+    border-radius: 20px;
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px 0px rgba(146, 146, 146, 0.20);
+    margin-bottom: 70px;
+    padding-bottom: 20px;
+}
+.catalog__item-img{
+    width: 172px;
+    height: 311px;
+}
+.catalog__item-inner{
+    margin: 20px 0 0 38px;
+    display: flex;
+}
+.catalog__item-title{
+    color: #F9B300;
+    font-family: "Gilroy Bold", sans-serif;
+    font-size: 18px;
+    margin-top: 52px;
+    margin-left: 42px;
+}
+.catalog__item-info{
+    margin-left: 20px;
+    margin-top: 130px;
+}
+.catalog__info-inner + .catalog__info-inner{
+    margin-top: 15px;
+}
+.info__text{
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: "Gilroy Light", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #222;
+}
+.item__title{
+    margin-left: 38px;
+}
+.item__title-text{
+    font-family: "Gilroy Bold", sans-serif;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.item__title-text-p{
+    margin: 0;
+    width: 286px;
+    font-family: "Gilroy Light", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+.item__price{
+    display: flex;
+    margin-top: 32px;
+    justify-content: space-between;
+    padding-right: 38px;
+}
+.price__text{
+    margin: 0;
+    font-family: "Gilroy Bold", sans-serif;
+    font-size: 35px;
+    color: #222;
+}
+.buy__btn{
+    border: none;
+    font-family: "Gilroy Light", sans-serif;
+    font-size: 18px;
+    color: white;
+    min-width: 178px;
+    height: 48px;
+    border-radius: 5px;
+    background-color: #F9B300;
+    cursor: pointer;
+}
+.buy__btn:hover{
+    background-color: #e4a300;
+}
+.buy__btn:active{
+    background-color: #bd8700;
+}
+.popup__bg{
+    position: absolute;
+    z-index: 10;
+    display: none;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+}
+.popup{
+    display: flex;
+    border-radius: .25rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #fff;
+}
+.auth__form{
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.login__input{
+    border: 1px solid #222;
+    border-radius: .25rem;
+    outline: none;
+    display: block;
+    margin-top: 10px;
+    width: 400px;
+    height: 30px;
+    font-size: 20px;
+    font-family: 'Gilroy Light', sans-serif;
+    text-align: center;
+}
+.login__label{
+    display: block;
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: 'Gilroy Light', sans-serif;
+}
+.auth__text{
+    margin: 50px;
+    font-size: 30px;
+    font-family: 'Gilroy Light', sans-serif;
+    text-align: center;
+}
+.auth{
+    display: block;
+}
+.btn__ath-form{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+.close__link{
+    float: right;
+}
+.reg__link{
+    font-size: 14px;
+    font-family: 'Gilroy Light', sans-serif;
+    text-decoration: underline;
+}
+.carts{
+    position: relative;
+    width: 100%;
+    min-height: 535px;
+    padding-bottom: 20px;
+    background-color: white;
+    margin-top: 200px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px 0px rgba(163, 163, 163, 0.25);
+}
+.carts__inner{
+    padding-top: 110px;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+.carts__top{
+    display: flex;
+    justify-content: space-between;
+}
+.delete__all-btn{
+    cursor: pointer;
+    text-align: center;
+    width: 150px;
+    height: 45px;
+    border: 1px solid #F9B300;
+    border-radius: 5px;
+    background: #FFF7E1;
+    font-family: 'Gilroy Light', sans-serif;
+    color: #F9B300;
+    font-size: 20px;
+}
+.delete__all-btn:hover{
+    background: #f5ecd6;
+}
+.delete__all-btn:active{
+    background: #e2dac4;
+}
+.carts__text{
+    font-family: 'Gilroy Bold', sans-serif;
+    font-size: 25px;
+}
+.table{
+    width: 100%;
+    border: none;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+.link__delete{
+    width: 21px;
+    height: 21px;
+}
+.table__th{
+    padding-bottom: 20px;
+    text-align: center;
+    color: #222;
+    font-size: 16px;
+    font-family: 'Gilroy Light', sans-serif;
+    font-weight: 500;
+}
+.table__td{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Gilroy Light', sans-serif;
+}
+.table__tr-body{
+    background-color: #FCFCFC;
+    border-radius: 20px;
+    border: 1px solid #F0F0F0;
+    height: 173px;
+}
+.carts__item{
+    display: flex;
+    width: 330px;
+    margin: 0 auto;
+}
+.carts__item-img{
+    width: 61px;
+    height: 113px;
+}
+.item__title-carts{
+    margin: 0;
+    color: #222;
+    font-size: 20px;
+    font-family: 'Gilroy Bold', sans-serif;
+    text-align: left;
+}
+.item__p{
+    font-family: 'Gilroy Light', sans-serif;
+    font-size: 16px;
+    width: 234px;
+    text-align: left;
+}
+.item__inner{
+    margin: 10px 34px;
+}
+.counts__inner{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 170px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #D6D6D6;
+    background: #F6F6F6;
+    align-items: center;
+    padding: 0 10px;
+}
+.btn__minus{
+    cursor: pointer;
+    font-family: 'Gilroy Light', sans-serif;
+    font-size: 25px;
+    border: none;
+    background-color: transparent;
+}
+.delete__link{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+.order{
+    display: flex;
+}
+.order__input{
+    display: block;
+    width: 100%;
+    height: 70px;
+    border-radius: 5px;
+    border: 1px solid #F6F6F6;
+    background: #FCFCFC;
+    outline: none;
+    margin-top: 20px;
+    font-family: 'Gilroy Light', sans-serif;
+    font-size: 20px;
+    padding-left: 60px;
+}
+.order__price{
+    font-family: 'Gilroy Bold', sans-serif;
+    font-size: 50px;
+}
+.order__inner{
+    display: flex;
+    justify-content: space-between;
+}
